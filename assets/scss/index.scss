@@ -1,0 +1,164 @@
+@import './base/base';
+@import './variable/variable.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+a.active{
+    color: $bg-primary-300;
+    position: relative;
+
+}
+//nesting css
+.header{
+    
+
+    .container1{
+        background-color: $bg-dark;
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        align-items: center;
+        .logo{
+            font-size: $text-3xl;
+        }
+        .menu{
+            a{
+                font-size: $text-base;
+                font-weight: $fw-normal;
+                text-decoration: none;
+                color: $text-primary-100;
+                margin: 0 $m-2;
+                &:hover{
+                    color: $text-primary-300;
+                    transition: color 0.3s;
+                }
+            }
+            img{
+                margin: 0 $m-2;
+            }
+        }
+    }
+    .container2{
+
+        .menu{
+            a{
+                font-size: $text-base;
+                font-weight: $fw-normal;
+                text-decoration: none;
+                color: $text-dark;
+                margin: 0 $m-2;
+                &:hover{
+                    color: $text-primary-300;
+                    transition: color 0.3s;
+                }
+            }
+        }
+    }
+}
+
+//Carousel
+
+.carousel{
+    background: url("/assets/img/product-bg.png");
+    background-size: cover;
+    background-position: bottom right;
+    
+    .thumb-nail{
+        min-height: 800px;
+        .img{
+
+        }
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .product-info {
+            .product-title{
+                @include mText($text-6xl, $fw-normal, $text-dark);
+            }
+            .product-desc{
+
+                @include mText();
+            }
+            .btn-buy{
+                @include mButton($text-base, $fw-semi, $text-dark, $bg-warning-300, 13.5px 44px, none, 5px, linear-gradient(120deg, #F8B653, #f79a4e), $text-dark);
+                box-shadow: -4px 4px 33px 0px rgba(135, 129, 129, 0.75);
+            }
+
+        }
+    }
+}
+
+
+
+//Products
+.product{
+    background: $bg-primary-100;
+
+    .container{
+        .product-title{
+            @include mText($text-5xl, $fw-semi, $text-dark);
+            text-align: center;
+            padding: $p-5 $p-0;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap; //Khi flex-item đủ 100% tự xuống dòng
+            .col{
+                width: calc(100%/3);
+                // border: 1px solid red;
+                $time:1;
+                @for $num from 1 to 7 {
+                    .item-#{$num}{
+                        animation: fadeDown #{$time}s;
+                    }
+                    $time: $time + 1;
+                }
+                .card{
+                    box-shadow: -4px 4px 33px 0px rgba(135, 129, 129, 0.75);
+                    margin: $m-5;
+                    padding: $p-5;
+                    img{
+                        width: 100%;
+                    }
+                    .card-body{
+                        .name{
+                            display: flex;
+                            justify-content: space-between;
+                            @include mText($text-base,$fw-semi,$text-dark);
+                        }
+                        .desc{
+
+                        }
+                        .buynow{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .btn-buy{
+                                //@extend .btn-primary-200;
+                                @include mButton($text-base, $fw-semi, $text-dark, $bg-warning-300, 13.5px 44px, none, 5px, linear-gradient(120deg, #F8B653, #f79a4e), $text-dark);
+                                box-shadow: -4px 4px 33px 0px rgba(135, 129, 129, 0.75); 
+                            }
+                            .price{
+                                margin-left: auto;
+                                font-weight: $fw-bold;
+                                font-size: $text-6xl;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

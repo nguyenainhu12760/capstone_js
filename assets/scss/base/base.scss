@@ -1,0 +1,71 @@
+// @import '../scss/variable/variable.scss';
+@import '../variable/variable.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container1{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container2{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+a.active{
+    color: $bg-primary-300;
+    position: relative;
+
+}
+//nesting css
+.header{
+    
+
+    .container1{
+        background-color: $bg-dark;
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        align-items: center;
+        .logo{
+            font-size: $text-3xl;
+        }
+        .menu{
+            a{
+                font-size: $text-base;
+                font-weight: $fw-normal;
+                text-decoration: none;
+                color: $text-primary-100;
+                margin: 0 $m-2;
+                &:hover{
+                    color: $text-primary-300;
+                    transition: color 0.3s;
+                }
+            }
+            img{
+                margin: 0 $m-2;
+            }
+        }
+    }
+    .container2{
+
+        .menu{
+            a{
+                font-size: $text-base;
+                font-weight: $fw-normal;
+                text-decoration: none;
+                color: $text-dark;
+                margin: 0 $m-2;
+                &:hover{
+                    color: $text-primary-300;
+                    transition: color 0.3s;
+                }
+            }
+        }
+    }
+}
