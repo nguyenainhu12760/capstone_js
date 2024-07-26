@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .m-0 {
   margin: 0rem;
 }
@@ -1086,6 +1087,27 @@ a.active {
 }
 .carousel .thumb-nail {
   min-height: 800px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel .thumb-nail .img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.carousel .thumb-nail .svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.carousel .thumb-nail .svg .arrow-left {
+  left: 0;
+}
+.carousel .thumb-nail .svg .arrow-right {
+  right: 0;
 }
 .carousel .container {
   display: flex;
@@ -1194,4 +1216,39 @@ a.active {
   margin-left: auto;
   font-weight: 700;
   font-size: 60px;
+}
+
+.footer .container .row .col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+.footer .container .row .col .item-1 {
+  animation: fadeDown 1s;
+}
+.footer .container .row .col .item-2 {
+  animation: fadeDown 2s;
+}
+.footer .container .row .col .item-3 {
+  animation: fadeDown 3s;
+}
+.footer .container .row .col .item-4 {
+  animation: fadeDown 4s;
+}
+.footer .container .row .col .item-5 {
+  animation: fadeDown 5s;
+}
+.footer .container .row .col .item-6 {
+  animation: fadeDown 6s;
+}
+.footer .container .row .col .card {
+  box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước */
+  padding: 20px; /* Khoảng đệm bên trong các card, có thể tùy chỉnh */
+}
+.footer .container .row .col .card .card-footer .name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
 }/*# sourceMappingURL=index.css.map */
