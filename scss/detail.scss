@@ -1,0 +1,84 @@
+@import './base/_base.scss';
+@import './variable/_variable.scss';
+
+.box-product{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 100px;
+    .detail-info-product{
+        margin-left: 150px;
+    }
+    .img-box-product{
+        padding: 90px 60px;
+        background-color: $light-200;
+    }
+    .title-detail-product{
+        font-size: 30px;
+        color: $dark-500;
+        font-weight: bold;
+    }
+    .text-detail{
+        font-size: 14px;
+        font-weight: 300;
+        color: $dark-400;
+        margin-top: 20px;
+    }
+    .text-availiable{
+        font-size: 24px;
+        font-weight: 500;
+        color: $green;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .box-size{
+        display: flex;
+        margin-top: 10px;
+        .detail-box-size{
+            padding: 15px;
+            background-color: $dark-300;
+            color:$dark-500 ;
+            font-size: 24px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+    }
+    .price-product{
+        font-size: 30px;
+        color: $warning-200;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .box-quanlity{
+        display: flex;
+        margin-top: 10px;
+        align-items: center;
+        font-size: 18px;
+        .sub{
+            background-color: $primary-100;
+            height: 30px;
+            width: 30px;
+            border: unset;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .add{
+            background-color: $primary-100;
+            height: 30px;
+            width: 30px;
+            border: unset;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+    }
+    .add-cart{
+        padding: 10px 28px;
+        margin-top: 10px;
+        border: unset;
+        background-color: $primary-100;
+        color: $light-100;
+        font-size: 18px;
+        cursor: pointer;
+    }
+}
