@@ -1,0 +1,11 @@
+@import '../variable/variable.scss';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter-Black';
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}

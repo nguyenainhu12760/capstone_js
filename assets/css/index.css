@@ -491,7 +491,7 @@
 }
 
 .container1 {
-  max-width: 1440px;
+  padding: 0px 40px;
   margin: 0 auto;
 }
 
@@ -1194,4 +1194,6 @@ a.active {
   margin-left: auto;
   font-weight: 700;
   font-size: 60px;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
